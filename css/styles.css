@@ -13,9 +13,9 @@
     --bg-button-hover: #188CE8;
     --header-border: #ECECEC;
     --gallery-border: #EEEEEE;
+    --social-icon: #AFB1B8;
 
-
-  
+ 
 }
 
 body {
@@ -23,6 +23,18 @@ body {
    color: var(--main-color);
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 .section {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -319,6 +331,7 @@ background-color: var(--bg-button-hover);
 
 
 .team-img-text {   
+    margin-bottom: 16px;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.19;
@@ -326,6 +339,42 @@ background-color: var(--bg-button-hover);
     letter-spacing: 0.03em;
     color: var(--third-main-color);
 }
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background-color: var(--bg-color);
+    border-radius: 50%;
+}
+
+.social-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.social-icon {
+    fill: var(--social-icon);
+}
+
+.social-link:hover,
+.social-link:focus {
+    background-color: var(--bg-accent-color);
+}
+
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+    fill: var(--bg-color);
+}
+
+
 
 /* подвал сайта */
 .footer {
